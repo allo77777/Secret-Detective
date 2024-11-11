@@ -10,10 +10,11 @@ label start:
 
 
     scene roof_vn
-
-    show day_0
-
+    show screen test_screen
+    
     "You have been a detective for a while now."
+    
+
     menu:
         "yeah":
             "you love your job too."
@@ -58,11 +59,12 @@ label start:
             "See you monday!"
 
 
-    jump day_1
+    jump day_1 
 
    
     
 label day_1:
+    $day_counter += 1
     scene living_room
     "Mrs. Francesca is a woman in her mid thirthies"
 

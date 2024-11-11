@@ -5,6 +5,31 @@
 init offset = -1
 
 
+###my screens###################################################################
+screen test_screen:
+    fixed:
+        xpos 100
+        ypos 200
+        #will see if it update automatically after new level, if not, will make it a function and call the function every new day
+        if day_counter == 0:
+            image day_arr[0] xpos -100 ypos -200 zoom 0.7
+        elif day_counter == 1:
+            image day_arr[1] xpos -100 ypos -200 zoom 0.7
+        elif day_counter == 2:
+            image day_arr[2] xpos -100 ypos -200 zoom 0.7
+        elif day_counter == 3:
+            image day_arr[3] xpos -100 ypos -200 zoom 0.7
+        elif day_counter == 4:
+            image day_arr[4] xpos -100 ypos -200 zoom 0.7
+        elif day_counter == 5:
+            image day_arr[5] xpos -100 ypos -200 zoom 0.7
+        
+
+
+
+
+###my screens###################################################################
+
 ################################################################################
 ## Styles
 ################################################################################
