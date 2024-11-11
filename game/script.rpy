@@ -40,8 +40,17 @@ label start:
             "It's money. Money and {b}secrets{/b}."
             "There's nothing after money that you love more than uncovering people's {b}secrets{/b}."
             "Fortunately for you, you will be visiting and interrogating suspects all week."
-            "You don't"
+            "On the other hand, even if you can't wait to interrogate all these people, you're sort of on thin ice with your boss..."
+            "You will need to arrest every suspects you meet, so make sure you get your reports right."
+            "Learn the {b}secrets{/b} of the suspects so that what the court finds out matches with your reports."
             "Now are you ready to start your week or do you want to practice your interrogation tactics. (tutorial)"
+            menu:
+                "yes":
+                    "tuto"
+                "no":
+                    "See you monday!"
+                    #may make a label to introduce first day bt for now it jumps automatically to the rest.
+
           
 
 
@@ -49,11 +58,14 @@ label start:
             "See you monday!"
 
 
-    jump talk_start
+    jump day_1
 
    
     
-    return
+label day_1:
+    scene living_room
+    "Mrs. Francesca is a woman in her mid thirthies"
+
 
 label talk_start:
 
