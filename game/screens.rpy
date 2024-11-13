@@ -25,8 +25,28 @@ screen test_screen:
             image day_arr[5] xpos -100 ypos -200 zoom 0.7
         
 
-
-
+#had a label but will try a scene to avoid redundancy.
+screen talk_option:
+    grid 2 2:
+        xalign 0.5
+        yalign 0.5
+        spacing 40 
+        frame:
+            textbutton "facts" action [SetVariable("dialogue_choice", "facts"), day_dialogue()]  xalign 0.5 yalign 0.5
+            xsize 400 ysize 200
+            
+        frame:
+            text "small talk" xalign 0.5 yalign 0.5
+            xsize 400 ysize 200 
+            
+        frame:
+            text "intimidation" xalign 0.5 yalign 0.5
+            xsize 400 ysize 200 
+            
+        frame:
+            text "arrest" xalign 0.5 yalign 0.5
+            xsize 400 ysize 200 
+            
 
 ###my screens###################################################################
 

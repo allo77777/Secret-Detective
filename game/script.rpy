@@ -1,6 +1,7 @@
 ﻿#counter for the char patience. will probably reset it at death and level completion. 
 #other than that it'll change with interaction.
 default patience_counter = 6
+default day_label = dialogue_choice + "_" + str(day_counter)
 
 
 # The game starts here.
@@ -10,10 +11,13 @@ label start:
 
 
     scene roof_vn
+    show screen talk_option
     show screen test_screen
     
+    "[dialogue_choice]"
     "You have been a detective for a while now."
-    
+    "[dialogue_choice]"
+    "[day_label]"
 
     menu:
         "yeah":
@@ -74,29 +78,35 @@ label talk_start:
     menu:
         #those are the main choices for what topic you will talk about with the victims. they redirect to labels with actual dialogue options
         "fact checks":
-            jump fact_checks
+            jump fact_checks_2
         "small talk":
-            jump small_talk
+            jump small_talk_2
         "intimidation":
-            jump intimidation
+            jump intimidation_2
         "arrest":
             jump arrest
 
     return
 
-label fact_checks:
+label facts_1:
+        
+    "hourra"
+        
+    return
+
+label fact_checks_2:
     menu:
         
         "time":
             mc "where were you yesterday at 9pm?"
             v "asleep."
-            jump fact_checks
+            jump fact_checks_2
         
         "profession":
             mc "so, mr Velinicci, what's your job?"
             v "I own a petshop."
             v "I used to have a studio for it but now I do it right in here, in my house."
-            jump fact_checks  
+            jump fact_checks_2  
         
         "relationship":
             mc "sir did you have any form of relationship to the victim?"
@@ -116,7 +126,7 @@ label fact_checks:
                     hide parrot
                     show Velinicci at center 
                     with dissolve
-                    jump fact_checks
+                    jump fact_checks_2
 
                 "He was your employee":
                     v "Was he?"
@@ -154,11 +164,11 @@ label fact_checks:
                             "Mr.Velinicci punched the parrot."
 
                             #would parrot and lose patience
-                            jump fact_checks
+                            jump fact_checks_2
 
                 
                 "I understand":
-                    jump fact_checks
+                    jump fact_checks_2
 
 
 
@@ -167,10 +177,10 @@ label fact_checks:
        
     return
 
-label small_talk:
+label small_talk_2:
     return
 
-label intimidation:
+label intimidation_2:
     return
 
 label arrest:
