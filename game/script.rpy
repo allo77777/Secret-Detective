@@ -1,7 +1,7 @@
 ﻿#counter for the char patience. will probably reset it at death and level completion. 
 #other than that it'll change with interaction.
 default patience_counter = 6
-default day_label = dialogue_choice + "_" + str(day_counter)
+
 
 
 # The game starts here.
@@ -11,13 +11,11 @@ label start:
 
 
     scene roof_vn
-    show screen talk_option
     show screen test_screen
     
-    "[dialogue_choice]"
+
     "You have been a detective for a while now."
-    "[dialogue_choice]"
-    "[day_label]"
+
 
     menu:
         "yeah":
@@ -63,17 +61,30 @@ label start:
             "See you monday!"
 
 
-    jump day_1 
+    jump intro_1
 
-   
+label intro_1:
+    "Last week, a hardworking influencer died of cake poisoning..."
+    "Like poison in the cake."
+    "Our reports tells us that the victim did not own a bakery."
+    "The best we can do is interrogate the neighbors."
+    #would show an animation with the title
+    jump day_1
     
 label day_1:
     $day_counter += 1
     scene living_room
-    "Mrs. Francesca is a woman in her mid thirthies"
+    show Francesca_n
+    "Mrs. Francesca is a ginger woman in her late thirties."
+    "Reports shows she lives alone and have an ordinary job"
+    f "Hello sir."
+    
+    
+    
 
+###vvvv all this is for day 2 vvvv### 
 
-label talk_start:
+label dialogue_choice_2:
 
     menu:
         #those are the main choices for what topic you will talk about with the victims. they redirect to labels with actual dialogue options
@@ -88,11 +99,7 @@ label talk_start:
 
     return
 
-label facts_1:
-        
-    "hourra"
-        
-    return
+
 
 label fact_checks_2:
     menu:
@@ -173,7 +180,7 @@ label fact_checks_2:
 
 
         "go back":
-            jump talk_start
+            jump dialogue_choice_2
        
     return
 
@@ -193,7 +200,7 @@ label arrest:
         "Arrest":
             return#would probably call a function here
         "Go back":
-            jump talk_start
+            jump dialogue_choice_2
 
     return
 

@@ -4,7 +4,7 @@
 define v = Character("Mr.Velinicci")
 define mc = Character("you")
 define p = Character("parrot")
-
+define f = Character("Mrs.Francesca")
 
 #images
 
@@ -14,6 +14,11 @@ image Velinicci = "pet_shop_v2.png"
 image test_img = "digger_pose.png"
 
 image parrot = "parrot_v2.png"
+
+image Francesca_n = "ginger_woman_n_v2"
+image Francesca_h = "ginger_woman_h_v2"
+image Francesca_a = "ginger_woman_a_v2"
+
 
 
 #day counter img

@@ -1,13 +1,6 @@
 init:
     $day_arr = ["day_0_v2", "day_1_v2", "day_2_v2", "day_3_v2", "day_4_v2", "day_5_v2",]
-    $day_counter = 1
-    $dialogue_choice = "adad"
+    $day_counter = 0
+    
 
-#this func is for called when pressed on the talk option screen. its a if statement to redirect to the dialogue matching the day counter
-    #def day_dialogue():
-        #if day_counter == 1: 
-            #jump f"{dialogue_choice}_{day_counter}" 
-init python:
-    def day_dialogue():
-        if day_counter == 1: 
-            renpy.jump(day_label)
+#suffered too much for a function that should work. will do labels for everyday. might give them a button texture if i can
