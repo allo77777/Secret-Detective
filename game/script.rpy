@@ -77,10 +77,51 @@ label day_1:
     show Francesca_n
     "Mrs. Francesca is a ginger woman in her late thirties."
     "Reports shows she lives alone and have an ordinary job"
-    f "Hello sir."
+    f "Welcome."
+    jump dialogue_choice_1
+
+label dialogue_choice_1:
+    menu:
+        "fact_checks":
+            jump fact_checks_1
+        "small talk":
+            jump small_talk_1
+
+        "intimidation":
+            jump intimidation_1
+
+        "arrest":
+            jump arrest
     
+label fact_checks_1:
+    mc "Let's get this straight..."
+    menu: 
+        "time":
+            mc "Where were you when the victim succumbed to the poison?"
+            f "Oh well I don't recall..."
+            f "At work maybe."
+        "profession":
+            "adasf"
+
+        "relationship":
+            mc "The victim was your neighbor, correct?"
+            f "Yes indeed, he was."
+            f "A true shame to die at that age."
+        "back":
+            jump dialogue_choice_1
+            
+
     
-    
+
+
+
+
+
+
+
+
+
+
 
 ###vvvv all this is for day 2 vvvv### 
 
@@ -103,25 +144,25 @@ label dialogue_choice_2:
 
 label fact_checks_2:
     menu:
-        
+
         "time":
-            mc "where were you yesterday at 9pm?"
-            v "asleep."
+            mc "Where were you yesterday at 9pm?"
+            v "Asleep."
             jump fact_checks_2
         
         "profession":
-            mc "so, mr Velinicci, what's your job?"
+            mc "So, mr Velinicci, what's your job?"
             v "I own a petshop."
             v "I used to have a studio for it but now I do it right in here, in my house."
             jump fact_checks_2  
         
         "relationship":
-            mc "sir did you have any form of relationship to the victim?"
+            mc "Sir did you have any form of relationship to the victim?"
             v "Never heard of the guy."
             
             menu:
                 
-                "have you had any other major relationship in your life":
+                "Have you had any other major relationship in your life":
                     v "no."
                     v "I've been alone for as long as I can remember."#gonna add sus counter or something
                     show Velinicci at left
